@@ -1,9 +1,10 @@
 /*
 
 jQuery Browser Plugin
-	* Version 2.3
-	* 2008-09-17 19:27:05
-	* URL: http://jquery.thewikies.com/browser
+	* Version 2.3.1
+	* 2010-08-13 15:02:11
+	* URL: https://github.com/digitaljhelms/jquery-browser
+	* Forked from URL: http://jquery.thewikies.com/browser
 	* Description: jQuery Browser Plugin extends browser detection capabilities and can assign browser selectors to CSS classes.
 	* Author: Nate Cavanaugh, Minhchau Dang, & Jonathan Neal
 	* Copyright: Copyright (c) 2008 Jonathan Neal under dual MIT/GPL license.
@@ -69,7 +70,8 @@ jQuery Browser Plugin
 		], /(applewebkit|rv|konqueror|msie)(\:|\/|\s)([a-z0-9\.]*?)(\;|\)|\s)/);
 
 		$.os = {
-			name: (/(win|mac|linux|sunos|solaris|iphone)/.exec(navigator.platform.toLowerCase()) || [u])[0].replace('sunos', 'solaris')
+			name: (/(win|mac|linux|sunos|solaris|iphone|ipad)/.exec(navigator.platform.toLowerCase()) || [u])[0].replace('sunos', 'solaris'),
+			android: (/android/.test(a))
 		};
 
 		if (!z) {
